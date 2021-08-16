@@ -1,7 +1,15 @@
 {
-  "name": "CUSTOMERPORTAL-2022-backend",
+  "name": "customer-2022-backend",
   "version": "1.0.0",
   "main": "index.js",
+  
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "test": "jest --watchAll",
+    "start": "nodemon --exec babel-node -r ./node_modules/dotenv/config src/index.js",
+    "build": "babel src -d dist",
+    "serve": "node -r dotenv/config dist/index.js"
+  },
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
